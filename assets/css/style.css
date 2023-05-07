@@ -1,0 +1,82 @@
+:root {
+    --text-color: black;
+    --header-color: #091f36;
+    --page-color: #1d1e22;
+    --light-text: #d4d4dc;
+    /* colors for reference: 
+     --blue-popsicle: #0f2862;
+     --redline: #9e363a; 
+     --purple-shadow: #091f36; 
+     --grey-blue-leaf: #4f5f76;
+     --original-text-color: black;
+     --original-header-color: gray;
+     --original-page-color: #002a2f;
+     --original-light-text: #FFFFFF; 
+     --Are ya yellow?!: #feda6a;
+     --Silver Fox: #d4d4dc;
+     --Deep Matte Grey: #393f4d;
+     --Dark Slate: #1d1e22; */
+}
+
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1vw;
+    color: var(--text-color);  
+}
+
+header {
+    background-color: var(--header-color);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2.5vw;
+}
+
+h1 {
+    font-size: 3rem;
+    color:var(--light-text)
+}
+
+body {
+    background-color: var(--page-color);
+    height: 100%;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4vw;
+}
+
+.section-header > h2{
+    color: var(--light-text);
+    font-size:  2em;
+    justify-self: flex-end;
+    border-right: 3px solid #4f5f76;
+    border-radius: 3vw;
+    padding: 1vw;
+    margin-right: 1vw;
+}
+
+article {
+    display: inherit;
+    flex-direction: row;
+    justify-self: space-between;
+
+}
+
+article section {
+    justify-self: center;
+}
+
+article p {
+    color: var(--light-text);
+}
+
+aside {
+    display: inherit;
+    flex-direction: row;
+    justify-content: flex-start;
+}
