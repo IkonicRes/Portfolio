@@ -21,7 +21,7 @@ header {
     justify-content: space-between;
     align-items: flex-start;
     background-color: var(--page-color);
-    height: 6vw;
+    height: 4vw;
     width: 100vw;
     padding: 1vw;
 }
@@ -42,12 +42,13 @@ h1 {
     color: var(--light-text);
     padding: 1vw 1vw;
 }
+
 #banner {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-start;
     align-items: flex-end;
-    height: 7.5vw;
+    height: 6vw;
 }
 
 q {
@@ -60,18 +61,18 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 4vw;
+    padding: 4vw 1vw 4vw 1vw;
     height: 60vw;
 }
 
 .section-header {
-    padding: 0 1vw 1vw 0;
+    padding: 0 0vw 1vw 4vw;
 }
 
 article {
     display: inherit;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 article section {
@@ -89,26 +90,32 @@ h3 {
 
 article p {
     color: var(--light-text);
-    padding: 0 3vw 0 3vw;
+    padding: 0 10vw 0 0vw;
 }
 
 #work {
     display: inherit;
     flex-direction: row;
+    padding-right: 2vw;
 }
 
 #work-cards {
     display: inherit;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 0 3vw 0 3vw;
+    flex-wrap: wrap;
+    flex-basis: 50%;
 }
 
 .card {
-    background-size: contain;
+    background-size: cover;
     font-size: 1rem;
     color: var(--light-text);
 }
+
+#work-cards:nth-child(0){
+    flex-basis: 100%;
+}
+
+
 
 aside .section-header{
     display: flex;
@@ -120,14 +127,19 @@ aside .section-header{
 }
 
 #contact-links a {
-    padding-left: 10vw;
+    padding: 0 8vw 0 1vw;
     text-decoration: none;
     color: var(--light-text);
     font-weight: 700;
 }
+
+#contact-links:nth-child(0) {
+    padding-left: 0;
+}
+
 aside:hover #contact-links {
     display: inherit;
-    align-self: center;
+    align-self: center; 
 }
 
 h4{
