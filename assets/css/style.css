@@ -1,8 +1,9 @@
 :root {
     --text-color: black;
-    --header-color: #091f36;
+    --header-color: #091f36c5;
     --page-color: #1d1e22;
-    --light-text: #d4d4dc;
+    --light-text: #d4d4dccc;
+    --border-color: #4f5f76;
     /* colors for reference: 
      --blue-popsicle: #0f2862;
      --redline: #9e363a; 
@@ -26,15 +27,47 @@
 
 header {
     background-color: var(--header-color);
+    display: block;
+}
+
+#navbar {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 2.5vw;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: var(--page-color);
+    height: 6vh;
+    width: 100vw;
+    padding: 1vw;
 }
 
 h1 {
-    font-size: 3rem;
-    color:var(--light-text)
+    font-size: 2.5em;
+    color: var(--light-text);
+}
+
+#navbar > nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+#navbar a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--light-text);
+    padding: 1vw 1vw;
+}
+#banner {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 10vh;
+}
+
+h2 {
+    font-size: 2rem;
+    color:var(--light-text);
+    padding: 0 1vw 1vw 0;
 }
 
 body {
@@ -42,41 +75,65 @@ body {
     height: 100%;
 }
 
-main{
+main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 4vw;
-}
-
-.section-header > h2{
-    color: var(--light-text);
-    font-size:  2em;
-    justify-self: flex-end;
-    border-right: 3px solid #4f5f76;
-    border-radius: 3vw;
-    padding: 1vw;
-    margin-right: 1vw;
 }
 
 article {
     display: inherit;
     flex-direction: row;
-    justify-self: space-between;
-
+    justify-content: space-between;
 }
 
 article section {
     justify-self: center;
 }
 
+h3 {
+    color: var(--light-text);
+    font-size: 1.5em;
+    border-right: 3px solid var(--border-color);
+    border-radius: 3vw;
+    padding: 1vw;
+    margin-right: 1vw;
+}
+
 article p {
     color: var(--light-text);
 }
 
-aside {
+#work {
     display: inherit;
     flex-direction: row;
     justify-content: flex-start;
+}
+
+#work-cards {
+    display: inherit;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.card {
+    background-size: contain;
+}
+
+aside .section-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#contact-links {
+    display: none;
+}
+
+aside:hover #contact-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
