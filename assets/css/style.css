@@ -25,6 +25,12 @@
     color: var(--text-color);  
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--page-color);
+    height: 100%;
+}
 header {
     background-color: var(--header-color);
     display: block;
@@ -35,13 +41,13 @@ header {
     justify-content: space-between;
     align-items: flex-start;
     background-color: var(--page-color);
-    height: 6vh;
+    height: 6vw;
     width: 100vw;
     padding: 1vw;
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
     color: var(--light-text);
 }
 
@@ -61,7 +67,7 @@ h1 {
     flex-direction: row-reverse;
     justify-content: flex-start;
     align-items: flex-end;
-    height: 10vh;
+    height: 10vw;
 }
 
 h2 {
@@ -70,17 +76,12 @@ h2 {
     padding: 0 1vw 1vw 0;
 }
 
-body {
-    background-color: var(--page-color);
-    height: 100%;
-}
 
 main {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
     padding: 4vw;
+    height: 60vw;
 }
 
 article {
@@ -120,20 +121,32 @@ article p {
 
 .card {
     background-size: contain;
+    font-size: 1rem;
+    color: var(--light-text);
 }
 
 aside .section-header{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: space-evenly;
 }
 
 #contact-links {
     display: none;
 }
 
+#contact-links a {
+    padding-left: 10vw;
+    text-decoration: none;
+    color: var(--light-text);
+    font-weight: 700;
+}
 aside:hover #contact-links {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    display: inherit;
+    align-self: center;
+}
+
+h4{
+    color: var(--light-text);
+    text-align: center;
 }
