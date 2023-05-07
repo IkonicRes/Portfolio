@@ -58,7 +58,7 @@ h1 {
 
 #navbar a {
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     color: var(--light-text);
     padding: 1vw 1vw;
 }
@@ -67,21 +67,24 @@ h1 {
     flex-direction: row-reverse;
     justify-content: flex-start;
     align-items: flex-end;
-    height: 10vw;
+    height: 7.5vw;
 }
 
-h2 {
-    font-size: 2rem;
+q {
+    font-size: 1.5rem;
     color:var(--light-text);
-    padding: 0 1vw 1vw 0;
 }
-
 
 main {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     padding: 4vw;
     height: 60vw;
+}
+
+.section-header {
+    padding: 0 1vw 1vw 0;
 }
 
 article {
@@ -105,18 +108,19 @@ h3 {
 
 article p {
     color: var(--light-text);
+    padding: 0 3vw 0 3vw;
 }
 
 #work {
     display: inherit;
     flex-direction: row;
-    justify-content: flex-start;
 }
 
 #work-cards {
     display: inherit;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    padding: 0 3vw 0 3vw;
 }
 
 .card {
@@ -128,7 +132,6 @@ article p {
 aside .section-header{
     display: flex;
     justify-content: flex-start;
-    align-items: space-evenly;
 }
 
 #contact-links {
