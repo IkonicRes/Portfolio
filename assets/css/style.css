@@ -1,7 +1,7 @@
 :root {
     --text-color: black;
     --header-color: #091f36c5;
-    --page-color: #1d1e22;
+    --page-color: #001118;
     --light-text: #d4d4dccc;
     --border-color: #4f5f76;
     --blue-popsicle: #0f2862;
@@ -17,6 +17,11 @@
     --Deep-Matte-Grey: #393f4d;
     --Dark-slate: #1d1e22;
     --easy-cyan: #3dd7fd;
+    --highlighted-cyan: #00ccff;
+    --shadow-positive: .05vw;
+    --shadow-negative: -.05vw;
+    --card-shadow-positive: .1vw;
+    --card-shadow-negative: -.1vw;
 }   
 * {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -50,6 +55,12 @@ h1 {
     font-size: 2.5rem;
     color: var(--Dark-slate);
     background-color: var(--easy-cyan);
+    text-shadow:
+    var(--shadow-negative) var(--shadow-negative) .08vw var(--blue-popsicle),  
+    var(--shadow-positive) var(--shadow-negative) .08vw var(--blue-popsicle),
+    var(--shadow-negative) var(--shadow-positive) .08vw var(--blue-popsicle),
+    var(--shadow-positive) var(--shadow-positive) .08vw var(--blue-popsicle);
+    
 }
 
 #navbar > nav {
@@ -60,7 +71,7 @@ h1 {
 #navbar a {
     text-decoration: none;
     font-size: 1.75rem;
-    color: var(--light-text);
+    color: var(--easy-cyan);
     padding: 1vw 1vw;
 }
 
@@ -69,24 +80,25 @@ h1 {
     flex-direction: row-reverse;
     justify-content: flex-start;
     align-items: flex-end;
-    height: 6vw;
-    background-image: url("../images/portfolio-banner.png");
-    background-size: contain;
+    height: 7vw;
+    background-image: url("../images/portfolio-banner-alt.png");
+    background-size: cover;
 }
 
 q {
     font-size: 1.5rem;
-    color:var(--light-text);
-    padding: 0 1vw 1vw 0;
+    color:var(--easy-cyan);
+    padding: 1.5vw 1vw 1vw 1vw;
+    align-self: center;
     background-image: url("../images/black-hole-background.png");
-    background-size: contain;
+    background-size: cover;
+    height: 5vw;
 }
 
 main {
     display: flex;
     flex-direction: column;
     padding: 5vw 1vw 4vw 1vw;
-    height: 60vw;
 }
 
 .section-header {
@@ -104,9 +116,9 @@ article section {
 }
 
 h3 {
-    color: var(--light-text);
+    color: var(--easy-cyan);
     font-size: 1.5em;
-    border-right: .2vw solid var(--border-color);
+    border-right: .2vw solid var(--highlighted-cyan);
     border-radius: 3vw;
     padding: 1vw;
     margin-right: 1vw;
@@ -116,6 +128,7 @@ h3 {
 article p {
     color: var(--light-text);
     padding: 0 10vw 0 0vw;
+    margin-bottom: 3vw;
 }
 
 #work {
@@ -123,7 +136,7 @@ article p {
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-    padding-right: 2vw;
+    padding-right: 10vw;
 
 }
 
@@ -134,35 +147,55 @@ article p {
 }
 
 .card {
-    background-image: url("../images/Wireframe.png");
+    background-image: url("../images/Coming-soon.png");
     background-size: cover;
     height: 32.5vw;
     font-size: 1rem;
-    color: var(--light-text);
-    font-size: 2.5vw;
-    padding: .3vw;
-    flex-basis: calc(50% - 3vw);
-    border: .2vw solid var(--Deep-Matte-Grey);
+    color: var(--easy-cyan);
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow:
+    var(--card-shadow-negative) var(--card-shadow-negative) .1vw #000,  
+    var(--card-shadow-positive) var(--card-shadow-negative) .1vw #000,
+    var(--card-shadow-negative) var(--card-shadow-positive) .1vw #000,
+    var(--card-shadow-positive) var(--card-shadow-positive) .1vw #000;
+    flex-basis: calc(50% - 1.5vw);
+    border: .3vw solid var(--highlighted-cyan);
     margin: .75vw;
+    text-align: center;
+    padding-top: 5vw;
+}
+
+.card:hover {
+    opacity: .75;
+}
+
+.card:hover text{
+    opacity: 1;
 }
 
 .card:first-child{
     flex-basis: 100%;
+    background-image: url("../images/2_5D-starter-kit.png");
+    background-size:cover;
 }
 
 aside .section-header{
     display: flex;
     justify-content: flex-start;
+    margin-top: 3vw;
 }
 
 #contact-links {
     display: none;
+    padding-left: 5vw;
+
 }
 
 #contact-links a {
     padding: 0 8vw 0 1vw;
     text-decoration: none;
-    color: var(--light-text);
+    color: var(--easy-cyan);
     font-weight: 700;
 }
 
@@ -172,7 +205,7 @@ aside:hover #contact-links {
 }
 
 h4{
-    color: var(--light-text);
+    color: var(--easy-cyan);
     text-align: center;
 }
 
