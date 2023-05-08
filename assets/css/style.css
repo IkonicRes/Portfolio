@@ -1,66 +1,38 @@
-:root {
-    --text-color: black;
-    --header-color: #091f36c5;
-    --page-color: #001118;
-    --light-text: #d4d4dccc;
-    --border-color: #4f5f76;
-    --blue-popsicle: #0f2862;
-    --redline: #9e363a; 
-    --purple-shadow: #091f36; 
-    --grey-blue-leaf: #4f5f76;
-    --original-text-color: black;
-    --original-header-color: gray;
-    --original-page-color: #002a2f;
-    --original-light-text: #FFFFFF; 
-    --Are-ya-yellow: #feda6a;
-    --Silver-Fox: #d4d4dc;
-    --Deep-Matte-Grey: #393f4d;
-    --Dark-slate: #1d1e22;
-    --easy-cyan: #3dd7fd;
-    --highlighted-cyan: #00ccff;
-    --shadow-positive: .05vw;
-    --shadow-negative: -.05vw;
-    --card-shadow-positive: .1vw;
-    --card-shadow-negative: -.1vw;
-}   
+ /* Set default font-family, size, and color for the entire page. */
 * {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 1vw;
     color: var(--text-color);  
 }
-
+/* Make the entire body a flex column, and give the page a background color of our saved page-color */
 body {
     display: flex;
     flex-direction: column;
     background-color: var(--page-color);
-    height: 100%;
 }
-
+ /* Set the header to block. */
 header {
-    background-color: var(--header-color);
     display: block;
 }
-
+/* Set the navbar to flex with space-between and flex-start, so it pushes both elements to edge. Set background color, width and height. */
 #navbar {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     background-color: var(--page-color);
     height: 4vw;
-    width: 100vw;
     padding: 1vw;
 }
-
+/* Set header1 color of text and background, relative font size, and a shadow to make it easier to look at. */
 h1 {
     font-size: 2.5rem;
     color: var(--Dark-slate);
     background-color: var(--easy-cyan);
     text-shadow:
-    var(--shadow-negative) var(--shadow-negative) .08vw var(--blue-popsicle),  
-    var(--shadow-positive) var(--shadow-negative) .08vw var(--blue-popsicle),
-    var(--shadow-negative) var(--shadow-positive) .08vw var(--blue-popsicle),
-    var(--shadow-positive) var(--shadow-positive) .08vw var(--blue-popsicle);
-    
+    var(--shadow-negative) var(--shadow-negative) .075vw var(--blue-popsicle),  
+    var(--shadow-positive) var(--shadow-negative) .075vw var(--blue-popsicle),
+    var(--shadow-negative) var(--shadow-positive) .075vw var(--blue-popsicle),
+    var(--shadow-positive) var(--shadow-positive) .075vw var(--blue-popsicle);
 }
 
 #navbar > nav {

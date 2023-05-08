@@ -1,7 +1,7 @@
 :root {
     --text-color: black;
     --header-color: #091f36c5;
-    --page-color: #1d1e22;
+    --page-color: #001118;
     --light-text: #d4d4dccc;
     --border-color: #4f5f76;
     --blue-popsicle: #0f2862;
@@ -16,5 +16,11 @@
     --Silver-Fox: #d4d4dc;
     --Deep-Matte-Grey: #393f4d;
     --Dark-slate: #1d1e22;
+    --easy-cyan: #3dd7fd;
+    --highlighted-cyan: #00ccff;
+    --shadow-positive: .05vw;
+    --shadow-negative: -.05vw;
+    --card-shadow-positive: .1vw;
+    --card-shadow-negative: -.1vw;
 }   
  /* /* colors for reference:  */
