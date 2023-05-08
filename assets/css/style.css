@@ -90,7 +90,7 @@ q {
     color:var(--easy-cyan);
     padding: 1.5vw 1vw 1vw 1vw;
     align-self: center;
-    background-image: url("../images/black-hole-background.png");
+    background-image: url("../images/black-hole-background-alt-blue.png");
     background-size: cover;
     height: 5vw;
 }
@@ -211,6 +211,6 @@ h4{
 
 @media screen and (min-width=1062px) {
     body {
-        display: none;
+        
     }
 }
