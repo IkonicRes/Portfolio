@@ -12,7 +12,7 @@
     --original-header-color: gray;
     --original-page-color: #002a2f;
     --original-light-text: #FFFFFF; 
-    --Are-ya-yellow: #feda6a;
+    --are-ya-yellow: #feda6a;
     --Silver-Fox: #d4d4dc;
     --Deep-Matte-Grey: #393f4d;
     --Dark-slate: #1d1e22;
@@ -23,5 +23,6 @@
     --card-shadow-positive: .1vw;
     --card-shadow-negative: -.1vw;
     --card-border-size: 5px;
+    --magenta-border: #e600e6;
 }   
  /* /* colors for reference:  */

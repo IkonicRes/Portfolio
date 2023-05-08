@@ -23,16 +23,18 @@ header {
     height: 4vw;
     padding: 1vw;
 }
-/* Set header1 color of text and background, relative font size, and a shadow to make it easier to look at. */
+/* Set header1 color of text and background, relative font size, and a shadow to make it easier to look at. Add a linear gradient to the background for maximum fancy */
 h1 {
     font-size: 2.5rem;
     color: var(--Dark-slate);
-    background-color: var(--easy-cyan);
     text-shadow:
     var(--shadow-negative) var(--shadow-negative) .075vw var(--blue-popsicle),  
     var(--shadow-positive) var(--shadow-negative) .075vw var(--blue-popsicle),
     var(--shadow-negative) var(--shadow-positive) .075vw var(--blue-popsicle),
     var(--shadow-positive) var(--shadow-positive) .075vw var(--blue-popsicle);
+    background-image: linear-gradient(to right, var(--easy-cyan)20%, var(--magenta-border));
+    padding-top: auto;
+    padding-bottom: auto;
 }
 
 #navbar > nav {
@@ -74,13 +76,13 @@ main {
 }
 
 .section-header {
-    padding: 0 0vw 1vw 4vw;
+    padding: 0 0 1vw 4vw;
 }
 
 article {
     display: inherit;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-start;
 }
 
 article section {
@@ -90,8 +92,9 @@ article section {
 h3 {
     color: var(--easy-cyan);
     font-size: 1.5em;
-    border-right: .2vw solid var(--highlighted-cyan);
-    border-radius: 3vw;
+    border: .2vw solid transparent;
+    border-image: linear-gradient(to bottom, var(--easy-cyan)20%, var(--magenta-border)) 1 100%;
+    height: 5vw;
     padding: 1vw;
     margin-right: 1vw;
     text-align: right;
@@ -100,7 +103,7 @@ h3 {
 article p {
     color: var(--light-text);
     padding: 0 10vw 0 0vw;
-    margin-bottom: 3vw;
+    margin: .75vw;
 }
 
 #work {
@@ -118,40 +121,26 @@ article p {
 
 }
 
-.card-gradient {
-    display: flex;
-    background-clip: padding-box;
-    background: linear-gradient(var(--highlighted-cyan, var(--Dark-slate)));
-    height: 32.5vw;
-    flex-basis: calc(50% - 1.5vw);
-    margin: .75vw;
-    position: relative;
-    padding: 2vw;
-}
-
-.card-gradient:first-child{
-    background-image: url("../images/2_5D-starter-kit.png");
-    background-size:cover;
-    width: 75vw;
-    flex-basis: 100%;
-}
 .card {
     background-image: url("../images/Coming-soon.png");
     background-size: cover;
+    height: 32.5vw;
     font-size: 1rem;
     color: var(--easy-cyan);
     font-size: 2.5rem;
     font-weight: 700;
-    align-items: flex-start;
     text-shadow:
     var(--card-shadow-negative) var(--card-shadow-negative) .1vw #000,  
     var(--card-shadow-positive) var(--card-shadow-negative) .1vw #000,
     var(--card-shadow-negative) var(--card-shadow-positive) .1vw #000,
     var(--card-shadow-positive) var(--card-shadow-positive) .1vw #000;
-    border: .3vw solid transparent;
+    flex-basis: calc(50% - 1.5vw);
+    border: .5vw solid;
+    border-image:
+        conic-gradient(var(--easy-cyan)10% , var(--magenta-border)50%, var(--easy-cyan)80%) 1;
+    margin: .75vw;
     text-align: center;
-    align-items: center;
-    padding-top: 5vw;
+    padding-top: 10vw
 }
 
 .card:hover {
@@ -162,15 +151,11 @@ article p {
     opacity: 1;
 }
 
-.card {
-    flex-basis: 50%;
-}
-
 .card:first-child{
     flex-basis: 100%;
+    background-image: url("../images/2_5D-starter-kit.png");
+    background-size:cover;
 }
-
-
 
 aside .section-header{
     display: flex;
@@ -181,7 +166,6 @@ aside .section-header{
 #contact-links {
     display: none;
     padding-left: 5vw;
-
 }
 
 #contact-links a {
