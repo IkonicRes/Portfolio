@@ -22,5 +22,6 @@
     --shadow-negative: -.05vw;
     --card-shadow-positive: .1vw;
     --card-shadow-negative: -.1vw;
+    --card-border-size: 5px;
 }   
  /* /* colors for reference:  */

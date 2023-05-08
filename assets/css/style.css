@@ -118,23 +118,39 @@ article p {
 
 }
 
+.card-gradient {
+    display: flex;
+    background-clip: padding-box;
+    background: linear-gradient(var(--highlighted-cyan, var(--Dark-slate)));
+    height: 32.5vw;
+    flex-basis: calc(50% - 1.5vw);
+    margin: .75vw;
+    position: relative;
+    padding: 2vw;
+}
+
+.card-gradient:first-child{
+    background-image: url("../images/2_5D-starter-kit.png");
+    background-size:cover;
+    width: 75vw;
+    flex-basis: 100%;
+}
 .card {
     background-image: url("../images/Coming-soon.png");
     background-size: cover;
-    height: 32.5vw;
     font-size: 1rem;
     color: var(--easy-cyan);
     font-size: 2.5rem;
     font-weight: 700;
+    align-items: flex-start;
     text-shadow:
     var(--card-shadow-negative) var(--card-shadow-negative) .1vw #000,  
     var(--card-shadow-positive) var(--card-shadow-negative) .1vw #000,
     var(--card-shadow-negative) var(--card-shadow-positive) .1vw #000,
     var(--card-shadow-positive) var(--card-shadow-positive) .1vw #000;
-    flex-basis: calc(50% - 1.5vw);
-    border: .3vw solid var(--highlighted-cyan);
-    margin: .75vw;
+    border: .3vw solid transparent;
     text-align: center;
+    align-items: center;
     padding-top: 5vw;
 }
 
@@ -146,11 +162,15 @@ article p {
     opacity: 1;
 }
 
+.card {
+    flex-basis: 50%;
+}
+
 .card:first-child{
     flex-basis: 100%;
-    background-image: url("../images/2_5D-starter-kit.png");
-    background-size:cover;
 }
+
+
 
 aside .section-header{
     display: flex;
