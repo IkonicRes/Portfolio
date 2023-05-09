@@ -23,7 +23,7 @@ header {
     height: 4vw;
     padding: 1vw;
 }
-/* Set header1 color of text and background, relative font size, and a shadow to make it easier to look at. Add a linear gradient to the background for maximum fancy */
+/* Set header1 relative font size, color of text and background, and a shadow to make it easier to look at. Add a linear gradient to the background for maximum fancy */
 h1 {
     font-size: 2.5rem;
     color: var(--Dark-slate);
@@ -33,32 +33,28 @@ h1 {
     var(--shadow-negative) var(--shadow-positive) .075vw var(--blue-popsicle),
     var(--shadow-positive) var(--shadow-positive) .075vw var(--blue-popsicle);
     background-image: linear-gradient(to right, var(--easy-cyan)20%, var(--magenta-border));
-    padding-top: auto;
-    padding-bottom: auto;
 }
-
+/* Set the Navbar items to flex so navbar links use flex-end to go to bottom of container*/
 #navbar > nav {
     display: flex;
-    justify-content: space-between;
 }
-
+/* Set the navbar links to no text decor to remove underline etc., set the font size to relative to html, the color of text, and a bit of padding to space out nav-links. */
 #navbar a {
     text-decoration: none;
     font-size: 1.75rem;
     color: var(--easy-cyan);
     padding: 1vw 1vw;
 }
-
+/* Set the large banner to display flex, and row reverse so smaller banner comes from the end. Give it a height 7% of the page width and a background image that covers the container*/
 #banner {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: flex-start;
-    align-items: flex-end;
     height: 7vw;
     background-image: url("../images/portfolio-banner-alt.png");
     background-size: cover;
 }
-
+/* Set the smaller banner quote text and text color, give it some padding so it doesnt lay flush with the sides of larger banner or page, set alignment to center so it doesnt rest on
+the top of the parent. Add a cool background image and give it a fixed height so it looks better. */
 q {
     font-size: 1.5rem;
     color:var(--easy-cyan);
@@ -68,27 +64,18 @@ q {
     background-size: cover;
     height: 5vw;
 }
-
+/* Set display flex on the main content (about me, work, and contact sections), set it to column so it flows down the page, and give it some padding to separate from header and sides.*/
 main {
     display: flex;
     flex-direction: column;
     padding: 5vw 1vw 4vw 1vw;
 }
-
+/* Pad all of the section-headers on the left so they push out from the page edge, and some on top so it lines up with children */
 .section-header {
-    padding: 0 0 1vw 4vw;
+    padding: 1vw 0 0 4vw;
 }
-
-article {
-    display: inherit;
-    flex-direction: row;
-    justify-content: flex-start;
-}
-
-article section {
-    justify-self: center;
-}
-
+/* set all of the section-header's header3s' text color, font to a relative size of the parent element, and add a linear gradient border of equal scaling height. Give it some padding
+to center the text, add a small margin on the right to give space between headers and children, align the text to the right, and give it a fixed width to keep it even  */
 h3 {
     color: var(--easy-cyan);
     font-size: 1.5em;
@@ -98,6 +85,13 @@ h3 {
     padding: 1vw;
     margin-right: 1vw;
     text-align: right;
+    width: 7vw;
+}
+/* Set display on the "about me" section to inherit the flex-box of main, and change the direction to row, so it flows to the right from
+the left edge (the section-header) instead of the default of down the page.*/
+article {
+    display: inherit;
+    flex-direction: row;
 }
 
 article p {
@@ -140,11 +134,12 @@ article p {
         conic-gradient(var(--easy-cyan)10% , var(--magenta-border)50%, var(--easy-cyan)80%) 1;
     margin: .75vw;
     text-align: center;
-    padding-top: 10vw
+    padding-top: 10vw;
+    opacity: .5;
 }
 
 .card:hover {
-    opacity: .75;
+    opacity: 1;
 }
 
 .card:hover text{
@@ -175,6 +170,10 @@ aside .section-header{
     font-weight: 700;
 }
 
+#contact-links a:hover {
+    font-size: calc(1.5rem);
+}
+
 aside:hover #contact-links {
     display: inherit;
     align-self: center;
@@ -185,8 +184,13 @@ h4{
     text-align: center;
 }
 
-@media screen and (min-width=1062px) {
-    body {
-        
+@media screen and (max-width:1062px) {
+    article {
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    }
+    header{
+
     }
 }
