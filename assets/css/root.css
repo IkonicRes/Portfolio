@@ -24,5 +24,16 @@
     --card-shadow-negative: -.1vw;
     --card-border-size: 5px;
     --magenta-border: #e600e6;
+    --h1-fontsize: 2.5rem;
+    --nav-link-fontsize: 1.75rem;
+    --q-fontsize: 1.5rem;
+    --h3-fontsize: 1.5em;
+    --card-fontsize: 2.5rem;
+    --contact-hover-size: 1.5rem;
+    --navbar-height: 4vw;
+    --banner-height: 7vw;
+    --sub-banner-height: 5vw;
+    --h3-height: 5vw;
 }   
  /* /* colors for reference:  */
+

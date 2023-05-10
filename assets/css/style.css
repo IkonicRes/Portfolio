@@ -1,5 +1,5 @@
  /* Set default font-family, size, and color for the entire page. */
-* {
+html{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 1vw;
     color: var(--text-color);  
@@ -14,18 +14,9 @@ body {
 header {
     display: block;
 }
-/* Set the navbar to flex with space-between and flex-start, so it pushes both elements to edge. Set background color, width and height. */
-#navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    background-color: var(--page-color);
-    height: 4vw;
-    padding: 1vw;
-}
 /* Set header1 relative font size, color of text and background, and a shadow to make it easier to look at. Add a linear gradient to the background for maximum fancy */
 h1 {
-    font-size: 2.5rem;
+    font-size: var(--h1-fontsize);
     color: var(--Dark-slate);
     text-shadow:
     var(--shadow-negative) var(--shadow-negative) .075vw var(--blue-popsicle),  
@@ -34,6 +25,15 @@ h1 {
     var(--shadow-positive) var(--shadow-positive) .075vw var(--blue-popsicle);
     background-image: linear-gradient(to right, var(--easy-cyan)20%, var(--magenta-border));
 }
+/* Set the navbar to flex with space-between and flex-start, so it pushes both elements to edge. Set background color, width and height. */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: var(--page-color);
+    height: var(--navbar-height);
+    padding: 1vw;
+}
 /* Set the Navbar items to flex so navbar links use flex-end to go to bottom of container*/
 #navbar > nav {
     display: flex;
@@ -41,7 +41,7 @@ h1 {
 /* Set the navbar links to no text decor to remove underline etc., set the font size to relative to html, the color of text, and a bit of padding to space out nav-links. */
 #navbar a {
     text-decoration: none;
-    font-size: 1.75rem;
+    font-size: var(--nav-link-fontsize);
     color: var(--easy-cyan);
     padding: 1vw 1vw;
 }
@@ -49,20 +49,20 @@ h1 {
 #banner {
     display: flex;
     flex-direction: row-reverse;
-    height: 7vw;
+    height: var(--banner-height);
     background-image: url("../images/portfolio-banner-alt.png");
     background-size: cover;
 }
 /* Set the smaller banner quote text and text color, give it some padding so it doesnt lay flush with the sides of larger banner or page, set alignment to center so it doesnt rest on
 the top of the parent. Add a cool background image and give it a fixed height so it looks better. */
 q {
-    font-size: 1.5rem;
+    font-size: var(--q-fontsize);
     color:var(--easy-cyan);
     padding: 1.5vw 1vw 1vw 1vw;
     align-self: center;
     background-image: url("../images/black-hole-background-alt-blue.png");
     background-size: cover;
-    height: 5vw;
+    height: var(--sub-banner-height);
 }
 /* Set display flex on the main content (about me, work, and contact sections), set it to column so it flows down the page, and give it some padding to separate from header and sides.*/
 main {
@@ -73,16 +73,18 @@ main {
 /* Pad all of the section-headers on the left so they push out from the page edge, and some on top so it lines up with children */
 .section-header {
     padding: 1vw 0 0 4vw;
+    align-self: flex-start;
 }
 /* set all of the section-header's header3s' text color, font to a relative size of the parent element, and add a linear gradient border of equal scaling height. Give it some padding
 to center the text, add a small margin on the right to give space between headers and children, align the text to the right, and give it a fixed width to keep it even  */
 h3 {
     color: var(--easy-cyan);
-    font-size: 1.5em;
+    font-size: var(--h3-fontsize);
+    box-sizing: content-box;
     border: .2vw solid transparent;
     border-image: linear-gradient(to bottom, var(--easy-cyan)20%, var(--magenta-border)) 1 100%;
-    height: 5vw;
-    padding: 1vw;
+    height: ;
+    padding: 2vw;
     margin-right: 1vw;
     text-align: right;
     width: 7vw;
@@ -119,9 +121,8 @@ article p {
     background-image: url("../images/Coming-soon.png");
     background-size: cover;
     height: 32.5vw;
-    font-size: 1rem;
     color: var(--easy-cyan);
-    font-size: 2.5rem;
+    font-size: var(--card-fontsize);
     font-weight: 700;
     text-shadow:
     var(--card-shadow-negative) var(--card-shadow-negative) .1vw #000,  
@@ -158,6 +159,17 @@ aside .section-header{
     margin-top: 3vw;
 }
 
+#contact-header {
+    text-align:center;
+    justify-self: center;
+    align-self: center;
+}
+
+#contact {
+    display: flex;
+    justify-content: space-around;
+}
+
 #contact-links {
     display: none;
     padding-left: 5vw;
@@ -171,7 +183,7 @@ aside .section-header{
 }
 
 #contact-links a:hover {
-    font-size: calc(1.5rem);
+    font-size: var(--contact-hover-size);
 }
 
 aside:hover #contact-links {
@@ -184,13 +196,68 @@ h4{
     text-align: center;
 }
 
-@media screen and (max-width:1062px) {
+/*Extra small devices (phones, 600px and down)*/
+@media only screen and (max-width: 600px) {
+    html{
+        font-size: 2vw;
+    }
+}
+/*Small devices (portrait tablets and large phones, 600px and up)*/
+@media only screen and (min-width: 600px) {
+    
+}
+/* Medium devices (landscape tablets, 768px and up)*/
+@media only screen and (min-width: 768px) {
+    
+}
+/* Large devices (laptops/desktops, 992px and up)*/
+@media only screen and (min-width: 992px) {
+    
+}
+/* Extra large devices (large laptops and desktops, 1200px and up)*/
+@media only screen and (min-width: 1200px) {...}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+@media screen and (max-width:768px) {
+    main{
+        padding: 1vw
+    }
+    .section-header{
+        padding: 0;
+    }
     article {
         flex-direction: column;
         justify-items: center;
         align-items: center;
     }
-    header{
-
+    article p{
+        display: inherit;
+        text-align: center;
+        padding: 2vw 10vw 2vw 10vw;
+        font-size: calc(--article);
+    
     }
-}
+    h3 {
+        font-size: calc(var(--h3-fontsize) * 3);
+        border-image: linear-gradient(to right, var(--easy-cyan)20%, var(--magenta-border)) 1 75%;
+        text-align: center;
+        align-content: center;
+        padding: 2vw;
+    }
+} */
