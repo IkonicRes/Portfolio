@@ -24,6 +24,7 @@ h1 {
     var(--shadow-negative) var(--shadow-positive) .075vw var(--blue-popsicle),
     var(--shadow-positive) var(--shadow-positive) .075vw var(--blue-popsicle);
     background-image: linear-gradient(to right, var(--easy-cyan)20%, var(--magenta-border));
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 1) inset, 0 0 3px 1px rgba(0, 0, 0, 0.5) inset;
 }
 /* Set the navbar to flex with space-between and flex-start, so it pushes both elements to edge. Set background color, width and height. */
 #title {
@@ -47,6 +48,7 @@ nav a {
 }
 /* Set the large banner to display flex, and row reverse so smaller banner comes from the end. Give it a height 7% of the page width and a background image that covers the container*/
 #banner {
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 1) inset, 0 0 5px 1px rgba(0, 0, 0, 0.5) inset;
     display: flex;
     flex-direction: row-reverse;
     height: var(--banner-height);
@@ -56,6 +58,7 @@ nav a {
 /* Set the smaller banner quote text and text color, give it some padding so it doesnt lay flush with the sides of larger banner or page, set alignment to center so it doesnt rest on
 the top of the parent. Add a cool background image and give it a fixed height so it looks better. */
 q {
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 1), 0 0 5px 1px rgba(0, 0, 0, 0.5) ;
     font-size: var(--q-fontsize);
     color:var(--easy-cyan);
     padding: 1.5vw 1vw 1vw 1vw;
@@ -118,6 +121,7 @@ article p {
 .card {
     background-image: url("../images/Coming-soon.png");
     background-size: cover;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 1) inset, 0 0 5px 1px rgba(0, 0, 0, 0.5) inset;
     height: var(--card-height);
     color: var(--easy-cyan);
     font-size: var(--card-fontsize);
@@ -211,6 +215,7 @@ h4{
     }
     nav a{
         box-sizing: content-box;
+        box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 1) inset, 0 0 5px 1px rgba(0, 0, 0, 0.5) inset;
         border: .25vw solid;
         border-image:
             conic-gradient(var(--easy-cyan)10% , var(--magenta-border)50%, var(--easy-cyan)80%) 1;
@@ -246,7 +251,7 @@ h4{
         height: 10vw;
     }
     #work {
-        padding-right: 0;
+        padding: 10vw;
     }
     #work-header h3{
         width: 70%;
@@ -264,6 +269,6 @@ h4{
     }
     .card {
         background-position: center;
-        padding: 2em 0 6em 0;
+        padding: 2em 0 4em 0;
     }
 }
