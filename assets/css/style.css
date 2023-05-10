@@ -8,7 +8,7 @@ html{
 body {
     display: flex;
     flex-direction: column;
-    background-color: var(--page-color);
+    background-color: var(--alt-background);
 }
  /* Set the header to block. */
 header {
@@ -26,20 +26,20 @@ h1 {
     background-image: linear-gradient(to right, var(--easy-cyan)20%, var(--magenta-border));
 }
 /* Set the navbar to flex with space-between and flex-start, so it pushes both elements to edge. Set background color, width and height. */
-#navbar {
+#title {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    background-color: var(--page-color);
+    background-color: var(--alt-background);
     height: var(--navbar-height);
     padding: 1vw;
 }
 /* Set the Navbar items to flex so navbar links use flex-end to go to bottom of container*/
-#navbar > nav {
+nav {
     display: flex;
 }
 /* Set the navbar links to no text decor to remove underline etc., set the font size to relative to html, the color of text, and a bit of padding to space out nav-links. */
-#navbar a {
+nav a {
     text-decoration: none;
     font-size: var(--nav-link-fontsize);
     color: var(--easy-cyan);
@@ -83,11 +83,11 @@ h3 {
     box-sizing: content-box;
     border: .2vw solid transparent;
     border-image: linear-gradient(to bottom, var(--easy-cyan)20%, var(--magenta-border)) 1 100%;
-    height: ;
+    height: calc(fit-content);
     padding: 2vw;
     margin-right: 1vw;
-    text-align: right;
     width: 7vw;
+    text-align: center;
 }
 /* Set display on the "about me" section to inherit the flex-box of main, and change the direction to row, so it flows to the right from
 the left edge (the section-header) instead of the default of down the page.*/
@@ -98,7 +98,7 @@ article {
 
 article p {
     color: var(--light-text);
-    padding: 0 10vw 0 0vw;
+    padding: 1vw 10vw 5vw 0;
     margin: .75vw;
 }
 
@@ -108,19 +108,17 @@ article p {
     justify-content: flex-start;
     align-items: flex-start;
     padding-right: 10vw;
-
 }
 
 #work-cards {
     display: flex;
     flex-wrap: wrap;
-
 }
 
 .card {
     background-image: url("../images/Coming-soon.png");
     background-size: cover;
-    height: 32.5vw;
+    height: var(--card-height);
     color: var(--easy-cyan);
     font-size: var(--card-fontsize);
     font-weight: 700;
@@ -155,8 +153,7 @@ article p {
 
 aside .section-header{
     display: flex;
-    justify-content: flex-start;
-    margin-top: 3vw;
+    justify-content: flex-end;
 }
 
 #contact-header {
@@ -197,67 +194,76 @@ h4{
 }
 
 /*Extra small devices (phones, 600px and down)*/
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 992px) {
     html{
-        font-size: 2vw;
+        font-size: 3vw; 
     }
-}
-/*Small devices (portrait tablets and large phones, 600px and up)*/
-@media only screen and (min-width: 600px) {
-    
-}
-/* Medium devices (landscape tablets, 768px and up)*/
-@media only screen and (min-width: 768px) {
-    
-}
-/* Large devices (laptops/desktops, 992px and up)*/
-@media only screen and (min-width: 992px) {
-    
-}
-/* Extra large devices (large laptops and desktops, 1200px and up)*/
-@media only screen and (min-width: 1200px) {...}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-@media screen and (max-width:768px) {
-    main{
-        padding: 1vw
-    }
-    .section-header{
-        padding: 0;
-    }
-    article {
+    *{
         flex-direction: column;
-        justify-items: center;
+    }
+    h1 {
+        margin-top: 1vw;
+        align-self: center;
+    }
+    nav {
+        flex-direction: row;
+        justify-content: center;
+    }
+    nav a{
+        box-sizing: content-box;
+        border: .25vw solid;
+        border-image:
+            conic-gradient(var(--easy-cyan)10% , var(--magenta-border)50%, var(--easy-cyan)80%) 1;
+        background-color: rgb(--page-color);
+    }
+    q {
+        padding: 5vw;
+        text-align: center;
+        justify-content: center;
+    }
+   article p {
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        padding: 2vw 0 2vw 0;
+    }
+    h3{
+        width: 75%;
+        justify-self: center;
+        text-align: center;
+    }
+    article, #work {
+        flex-direction: column;
         align-items: center;
     }
-    article p{
-        display: inherit;
+    .section-header {
+        margin: 0 auto;
+        padding: 0;
         text-align: center;
-        padding: 2vw 10vw 2vw 10vw;
-        font-size: calc(--article);
-    
     }
-    h3 {
-        font-size: calc(var(--h3-fontsize) * 3);
-        border-image: linear-gradient(to right, var(--easy-cyan)20%, var(--magenta-border)) 1 75%;
-        text-align: center;
-        align-content: center;
-        padding: 2vw;
+    #about-header h3 {
+        width: 75%;
+        height: 10vw;
     }
-} */
+    #work {
+        padding-right: 0;
+    }
+    #work-header h3{
+        width: 70%;
+        height: 5vw;
+    }
+    #contact-header {
+        height: 10vw;
+        margin-top: 2vw;
+    }
+    #contact-links {
+        flex-direction: row;
+    }
+    #contact-links a {
+        padding: 2vw 1.5vw 2vw 1.5vw;
+    }
+    .card {
+        background-position: center;
+        padding: 2em 0 6em 0;
+    }
+}

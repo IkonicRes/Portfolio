@@ -24,16 +24,18 @@
     --card-shadow-negative: -.1vw;
     --card-border-size: 5px;
     --magenta-border: #e600e6;
-    --h1-fontsize: 2.5rem;
-    --nav-link-fontsize: 1.75rem;
+    --h1-fontsize: 3rem;
+    --nav-link-fontsize: 2rem;
     --q-fontsize: 1.5rem;
-    --h3-fontsize: 1.5em;
+    --h3-fontsize: 1.85em;
     --card-fontsize: 2.5rem;
-    --contact-hover-size: 1.5rem;
-    --navbar-height: 4vw;
-    --banner-height: 7vw;
-    --sub-banner-height: 5vw;
-    --h3-height: 5vw;
+    --contact-hover-size: 1.5em;
+    --navbar-height: 4em;
+    --banner-height: 7em;
+    --sub-banner-height: 3.5em;
+    --h3-height: .2em;
+    --card-height: 11em;
+    --alt-background: rgb(16, 0, 37);
 }   
  /* /* colors for reference:  */
 
