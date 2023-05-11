@@ -1,41 +1,23 @@
 :root {
     --text-color: black;
-    --header-color: #091f36c5;
-    --page-color: #001118;
-    --light-text: #d4d4dccc;
-    --border-color: #4f5f76;
-    --blue-popsicle: #0f2862;
-    --redline: #9e363a; 
-    --purple-shadow: #091f36; 
-    --grey-blue-leaf: #4f5f76;
-    --original-text-color: black;
-    --original-header-color: gray;
-    --original-page-color: #002a2f;
-    --original-light-text: #FFFFFF; 
-    --are-ya-yellow: #feda6a;
-    --Silver-Fox: #d4d4dc;
-    --Deep-Matte-Grey: #393f4d;
-    --Dark-slate: #1d1e22;
-    --easy-cyan: #3dd7fd;
-    --highlighted-cyan: #00ccff;
+    --h1-fontsize: 3rem;
+    --navbar-height: 4em;
+    --nav-link-fontsize: 2rem;
+    --banner-height: 7em;
+    --q-fontsize: 1.5rem;
     --shadow-positive: .05vw;
     --shadow-negative: -.05vw;
+    --sub-banner-height: 3.5em;
+    --h3-fontsize: 1.85em;
+    --light-text: #d4d4dccc;
+    --card-height: 11em;
+    --card-fontsize: 2.5rem;
     --card-shadow-positive: .1vw;
     --card-shadow-negative: -.1vw;
-    --card-border-size: 5px;
-    --magenta-border: #e600e6;
-    --h1-fontsize: 3rem;
-    --nav-link-fontsize: 2rem;
-    --q-fontsize: 1.5rem;
-    --h3-fontsize: 1.85em;
-    --card-fontsize: 2.5rem;
     --contact-hover-size: 1.5em;
-    --navbar-height: 4em;
-    --banner-height: 7em;
-    --sub-banner-height: 3.5em;
-    --h3-height: .2em;
-    --card-height: 11em;
-    --alt-background: rgb(16, 0, 37);
-}   
- /* /* colors for reference:  */
-
+    --header-purple: #180011;
+    --page-color: rgb(14, 0, 37);
+    --easy-cyan: #3dd7fd;
+    --magenta-border: #e600e6;
+    --Dark-slate: #1d1e22;
+}
