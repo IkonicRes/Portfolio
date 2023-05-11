@@ -1,41 +1,42 @@
- /* Set default font-family, size, and color for the entire page. */
+ /* Set default font-family, size, and text color for the entire page. */
 html{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 1vw;
     color: var(--text-color);  
 }
-/* Make the entire body a flex column, and give the page a background color of our saved page-color */
+/* Give the page a background color of our saved page-color */
 body {
-    display: flex;
-    flex-direction: column;
     background-color: var(--alt-background);
 }
- /* Set the header to block. */
+ /* Set the header to flex column so that the banner can rest below */
 header {
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
-/* Set header1 relative font size, color of text and background, and a shadow to make it easier to look at. Add a linear gradient to the background for maximum fancy */
+/* Set the header-top to inherit flex row and some space between for the title to space from navlinks */
+#header-top {
+    display: inherit;
+    justify-content: space-between;
+}
+/* Set the background height of the h1, and pad the top to center it vertically*/
+#title {
+    height: var(--navbar-height);
+    padding-top: .5vw;
+}
+/* Set header1 relative font size, color of text and background, and a shadow to make it easier to look at. Add a linear gradient to the background, and swap shadow colors
+for maximum fancy */
 h1 {
     font-size: var(--h1-fontsize);
     color: var(--Dark-slate);
     text-shadow:
-    var(--shadow-negative) var(--shadow-negative) .075vw var(--blue-popsicle),  
-    var(--shadow-positive) var(--shadow-negative) .075vw var(--blue-popsicle),
-    var(--shadow-negative) var(--shadow-positive) .075vw var(--blue-popsicle),
-    var(--shadow-positive) var(--shadow-positive) .075vw var(--blue-popsicle);
+    var(--shadow-negative) var(--shadow-negative) .3vw var(--magenta-border),  
+    var(--shadow-positive) var(--shadow-negative) .3vw var(--easy-cyan),
+    var(--shadow-negative) var(--shadow-positive) .3vw var(--easy-cyan),
+    var(--shadow-positive) var(--shadow-positive) .3vw var(--magenta-border);
     background-image: linear-gradient(to right, var(--easy-cyan)20%, var(--magenta-border));
-    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 1) inset, 0 0 3px 1px rgba(0, 0, 0, 0.5) inset;
+    box-shadow: 0px 0px 1vw .5vw rgba(0, 0, 0, 1) inset, 0 0 1vw .5vw rgba(0, 0, 0, 0.5) inset;
 }
-/* Set the navbar to flex with space-between and flex-start, so it pushes both elements to edge. Set background color, width and height. */
-#title {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    background-color: var(--alt-background);
-    height: var(--navbar-height);
-    padding: 1vw;
-}
-/* Set the Navbar items to flex so navbar links use flex-end to go to bottom of container*/
+/* Set the Navbar items to flex so navbar links use flex to center in container*/
 nav {
     display: flex;
 }
@@ -48,7 +49,7 @@ nav a {
 }
 /* Set the large banner to display flex, and row reverse so smaller banner comes from the end. Give it a height 7% of the page width and a background image that covers the container*/
 #banner {
-    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 1) inset, 0 0 5px 1px rgba(0, 0, 0, 0.5) inset;
+    box-shadow: 0px 0px 1vw .1vw rgba(0, 0, 0, 1) inset, 0 0 1vw .1vw rgba(0, 0, 0, 0.5) inset;
     display: flex;
     flex-direction: row-reverse;
     height: var(--banner-height);
@@ -112,7 +113,9 @@ article p {
     align-items: flex-start;
     padding-right: 10vw;
 }
-
+#work-header{
+    margin-bottom: 2vw
+}
 #work-cards {
     display: flex;
     flex-wrap: wrap;
@@ -173,7 +176,6 @@ aside .section-header{
 
 #contact-links {
     display: none;
-    padding-left: 5vw;
 }
 
 #contact-links a {
@@ -191,10 +193,10 @@ aside:hover #contact-links {
     display: inherit;
     align-self: center;
 }
-
 h4{
     color: var(--easy-cyan);
     text-align: center;
+    padding-left: 3vw;
 }
 
 /*Extra small devices (phones, 600px and down)*/
@@ -205,9 +207,24 @@ h4{
     *{
         flex-direction: column;
     }
+    #header-top {
+        flex-direction: column;
+    }
+    #title{
+        display: flex;
+    }
     h1 {
         margin-top: 1vw;
         align-self: center;
+        font-size: var(--h1-fontsize);
+        color: var(--Dark-slate);
+        text-shadow:
+        var(--shadow-negative) var(--shadow-negative) 1vw var(--magenta-border),  
+        var(--shadow-positive) var(--shadow-negative) 1vw var(--easy-cyan),
+        var(--shadow-negative) var(--shadow-positive) 1vw var(--easy-cyan),
+        var(--shadow-positive) var(--shadow-positive) 1vw var(--magenta-border);
+        background-image: linear-gradient(to right, var(--easy-cyan)20%, var(--magenta-border));
+        box-shadow: 0px 0px 2vw 1vw rgba(0, 0, 0, 1) inset, 0 0 2vw 1vw rgba(0, 0, 0, 1) inset;
     }
     nav {
         flex-direction: row;
@@ -222,7 +239,7 @@ h4{
         background-color: rgb(--page-color);
     }
     q {
-        padding: 5vw;
+        padding: 3vw;
         text-align: center;
         justify-content: center;
     }
@@ -270,5 +287,8 @@ h4{
     .card {
         background-position: center;
         padding: 2em 0 4em 0;
+    }
+    h4{
+        padding-left: 0;
     }
 }
