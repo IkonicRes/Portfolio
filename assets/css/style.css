@@ -47,14 +47,29 @@ nav a {
     color: var(--easy-cyan);
     padding: 1vw 1vw;
 }
+
+#hero-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url("../images/portfolio-banner-alt.png");
+    box-shadow: 0px 0px 1vw .1vw rgba(0, 0, 0, 1) inset, 0 0 1vw .1vw rgba(0, 0, 0, 0.5) inset;
+    height: var(--banner-height);
+    background-size: cover;
+}
+
+#hero-section img {
+    /* position: absolute; */
+    height: 12vw;
+    z-index: 1;
+}
 /* Set the large banner to display flex, and row reverse so smaller banner comes from the end. Give it a height 7% of the page width and a background image that covers the container*/
 #banner {
-    box-shadow: 0px 0px 1vw .1vw rgba(0, 0, 0, 1) inset, 0 0 1vw .1vw rgba(0, 0, 0, 0.5) inset;
+
     display: flex;
     flex-direction: row-reverse;
-    height: var(--banner-height);
-    background-image: url("../images/portfolio-banner-alt.png");
-    background-size: cover;
+ 
 }
 /* Set the smaller banner quote text and text color, give it some padding so it doesnt lay flush with the sides of larger banner or page, set alignment to center so it doesnt rest on
 the top of the parent. Add a cool background image and give it a fixed height so it looks better. */
@@ -226,13 +241,19 @@ h4 {
             conic-gradient(var(--easy-cyan)10% , var(--magenta-border)50%, var(--easy-cyan)80%) 1;
         background-color: var(--header-purple);
     }
+    #hero-section{
+        flex-direction: column;
+    }
+    #hero-section img {
+        height: 30vw;
+    }
     /* Give the quote a slight padding and center it. */
     q {
         padding: 3vw;
         text-align: center;
     }
     /* Center the article paragraph and add a padding to the top and bottom to space it out nicely */
-   article p {
+    article p {
         text-align: center;
         padding: 2vw 0 2vw 0;
     }
