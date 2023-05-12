@@ -16,7 +16,7 @@ I wanted the page to look really nice on both desktop and mobile and to showcase
 
 Here's a link to my deployed page, go check around:   
 [My Portfolio](https://ikonicres.github.io/Professional-Portfolio/)  
-On smaller screens like mobile devices or tablets, the page layout switches to a scale thats easier to view, with things cascading vertically down the page in a column. Use the navlinks at the top right to jump around the page, the work cards to navigate externally to my work, and hovering over the "contact" section pops up all of the contact links.  
+On smaller screens like mobile devices or tablets, the page layout switches to a scale thats easier to view, with things cascading vertically down the page in a column. Use the navlinks at the top right to jump around the page and the resume link to download my resume directly. The work cards to navigate externally to my work, and hovering over the "contact" section pops up all of the contact links.
 
 
 ![Desktop preview](./assets/images/preview.png)
@@ -42,4 +42,4 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ## Features
 
-Scales to mobile and tablet resolutions well with an alternate layout. Has nav-links to jump around the page and cards that when clicked externally link to my works. Nice gradients and colors to make it easy to look at. Enjoy!
+Scales to mobile and tablet resolutions well with an alternate layout. Has nav-links to jump around the page and cards that when clicked externally link to my works. Nice gradients and colors to make it easy to look at. You can directly download my resume with the download link. Enjoy!

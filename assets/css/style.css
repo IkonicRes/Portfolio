@@ -231,8 +231,9 @@ h4 {
         flex-direction: row;
         justify-content: center;
     }
-    /* Give the navlinks a box shadow, gradient border, and a nice purple background color */
+    /* Give the navlinks a box shadow, gradient border, and a nice purple background color, and set the font size to scale */
     nav a {
+        font-size: calc(var(--nav-link-fontsize) * .91);
         box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 1) inset, 0 0 5px 1px rgba(0, 0, 0, 0.5) inset;
         border: .25vw solid;
         border-image:
@@ -308,10 +309,13 @@ h4 {
     /* Change the contact links' flex direction to row, so they lay out horizontally. */
     #contact-links {
         flex-direction: row;
+        font-size: 2vw;
     }
     /* Give the contact links a bit of padding so they inlay nicely in the center */
     #contact-links a {
-        padding: 2vw 1.5vw 2vw 1.5vw;
+        display: inherit;
+        flex-direction: row;
+        padding: 1vw 1vw 1vw 1vw;
     }
     /* Set the left margin to 0 to undo offset centering on card section from desktop layout */
     h4 {
