@@ -14,7 +14,9 @@ I wanted the page to look really nice on both desktop and mobile and to showcase
 
 ## Usage
 
-Here's a link to my deployed page. On smaller screens like mobile devices or tablets, the page layout switches to a scale thats easier to view, with things cascading vertically down the page in a column. Use the navlinks at the top right to jump around the page, the work cards to navigate externally to my work, and hovering over the "contact" section pops up all of the contact links.  
+Here's a link to my deployed page, go check around:   
+[My Portfolio](https://ikonicres.github.io/Professional-Portfolio/)
+On smaller screens like mobile devices or tablets, the page layout switches to a scale thats easier to view, with things cascading vertically down the page in a column. Use the navlinks at the top right to jump around the page, the work cards to navigate externally to my work, and hovering over the "contact" section pops up all of the contact links.  
 
 
 ![Desktop preview](./assets/images/preview.png)
