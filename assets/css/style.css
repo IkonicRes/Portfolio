@@ -1,5 +1,5 @@
  /* Set default font-family, size, and text color for the entire page. */
-html{
+html {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 1vw;
     color: var(--text-color);  
@@ -74,6 +74,10 @@ main {
     flex-direction: column;
     padding: 5vw 1vw 4vw 1vw;
 }
+/* Set display on the "about me" section to inherit the flexbox's row style*/
+article {
+    display: inherit;
+}
 /* Pad all of the section-headers on the left so they push out from the page edge, and on top so it lines up with children */
 .section-header {
     padding: 1vw 0 0 4vw;
@@ -92,10 +96,6 @@ h3 {
     margin-right: 1vw;
     width: 7vw;
     text-align: center;
-}
-/* Set display on the "about me" section to inherit the flexbox's row style*/
-article {
-    display: inherit;
 }
 /* Set the color of the article's paragraph text to --light-text, add some padding and margin to keep it center in the page and space out a bit from the top left. */
 article p {
@@ -116,7 +116,7 @@ article p {
 /* Give the cards a default "coming soon" image, make the size to cover the image, add a fancy box-shadow inset to make it look nice. Set the height
 So that it takes up some room, and make the font inside bolded, cyan, bigger, and give it a black shadow. Give the cards a small margin around and 
 a small conic gradient border. Set the flex-basis to calculate the small margin so two cards can fit on one line, align the caption to center and
- add a bit of padding so it comes down a little. Decrease default opacity for desktop so it highlights when you hover. */
+add a bit of padding so it comes down a little. Decrease default opacity for desktop so it highlights when you hover. */
 .card {
     background-image: url("../images/Coming-soon.png");
     background-size: cover;
@@ -144,7 +144,7 @@ a small conic gradient border. Set the flex-basis to calculate the small margin 
     opacity: 1;
 }
 /* Set the image on the first child, make it take up the full row on desktop, and make the image cover the background */
-.card:first-child{
+.card:first-child {
     flex-basis: 100%;
     background-image: url("../images/2_5D-starter-kit.png");
     background-size:cover;
@@ -180,24 +180,23 @@ aside:hover #contact-links {
     align-self: center;
 }
 /* Set the footer header to cyan, align it center, and give it a slight left margin for desktop to also center under work card section */
-h4{
+h4 {
     color: var(--easy-cyan);
     text-align: center;
     margin-left: 6vw;
 }
-
 /*Media calls for smaller devices (phones, tablets 992px and down), changes layout of page to be friendly on the eyes for mobile etc*/
 @media only screen and (max-width: 992px) {
-    /* Set the whole page's base font size to 3x what it originally was, 3 percent of the viewport width */
-    html{
-        font-size: 3vw; 
-    }
     /* Make everything run in a flex column instead of row, fixing most of the layout */
-    *{
+    * {
         flex-direction: column;
     }
+    /* Set the whole page's base font size to 3x what it originally was, 3 percent of the viewport width */
+    html {
+        font-size: 3vw; 
+    }
     /* Set the title to inherit display flex properties of parent. */
-    #title{
+    #title {
         display: inherit;
     }
     /* Give the header1 text a small margin on top to center it, reset the font-size to the saved relative multiplier same as before, and add fancy shadows/gradients. */
@@ -220,7 +219,7 @@ h4{
         justify-content: center;
     }
     /* Give the navlinks a box shadow, gradient border, and a nice purple background color */
-    nav a{
+    nav a {
         box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 1) inset, 0 0 5px 1px rgba(0, 0, 0, 0.5) inset;
         border: .25vw solid;
         border-image:
@@ -232,61 +231,40 @@ h4{
         padding: 3vw;
         text-align: center;
     }
-    
+    /* Center the article paragraph and add a padding to the top and bottom to space it out nicely */
    article p {
-        justify-content: center;
-        align-content: center;
         text-align: center;
         padding: 2vw 0 2vw 0;
     }
-    h3{
-        width: 75%;
-        justify-self: center;
-        text-align: center;
-    }
-    article, #work {
-        flex-direction: column;
-        align-items: center;
-    }
+    /* Set the section header class margin to 0 and auto, to give it margin space on the sides and none on the top and bottom */
     .section-header {
         margin: 0 auto;
-        padding: 0;
-        text-align: center;
     }
+    /* Set the about-header width to 75% to cover text */
     #about-header h3 {
         width: 75%;
-        height: 10vw;
     }
+    /* Pad the work section all around with 10% of the viewport width, so its nice and center inlaid */
     #work {
         padding: 10vw;
     }
     /* Add a small margin to space out the work header from the content */
-    #work-header{
+    #work-header {
     margin-bottom: 2vw
-}
-    #work-header h3{
+    }
+    /* Set the work-header width to 70% to cover text */
+    #work-header h3 {
         width: 70%;
-        height: 5vw;
     }
-    #contact-header {
-        height: 10vw;
-        margin-top: 2vw;
-        padding: 0;
-    }
-    #contact-links {
-        flex-direction: row;
-    }
-    #contact-links a {
-        padding: 2vw 1.5vw 2vw 1.5vw;
-    }
+        /* Downsize font-size to make cards all the same size, 
+    TODO: !!! TEXT CANT BE LONGER THAN 25 CHARACTERS FOR CAPTION OR CARD SIZE WILL CHANGE!!!
+    This fix is a wee bit janky but brain not willing atm, sorry future me.
+    Set background position to center, and add a bit of padding to the top and bottom to make the min-height of the card raise.
+    Set opacity to one, because hover opacity doesnt work well on mobile, and add a nice text shadow.*/
     .card {
+        font-size: calc(var(--card-fontsize) * .8);
         background-position: center;
         padding: 2em 0 4em 0;
-    }
-    h4{
-        padding-left: 0;
-    }
-    .card {
         opacity: 1;
         text-shadow:
         var(--card-shadow-negative) var(--card-shadow-negative) .5vw #000,  
@@ -294,9 +272,27 @@ h4{
         var(--card-shadow-negative) var(--card-shadow-positive) .5vw #000,
         var(--card-shadow-positive) var(--card-shadow-positive) .5vw #000;
     }
+    /* Set opacity to .75 to invert hover opacity for mobile */
     .card:hover {
         opacity: .75;
     }
+    /* Set the contact header padding to zero to remove the offset from desktop layout */
+    #contact-header {
+        padding: 0;
+    }
+    /* Set the contact-header h3 width to 80% to cover text */
+    #contact-header h3 {
+        width: 80%;
+    }
+    /* Change the contact links' flex direction to row, so they lay out horizontally. */
+    #contact-links {
+        flex-direction: row;
+    }
+    /* Give the contact links a bit of padding so they inlay nicely in the center */
+    #contact-links a {
+        padding: 2vw 1.5vw 2vw 1.5vw;
+    }
+    /* Set the left margin to 0 to undo offset centering on card section from desktop layout */
     h4 {
         margin-left: 0;
     }
