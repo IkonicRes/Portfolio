@@ -15,13 +15,13 @@ I wanted the page to look really nice on both desktop and mobile and to showcase
 ## Usage
 
 Here's a link to my deployed page, go check around:   
-[My Portfolio](https://ikonicres.github.io/Professional-Portfolio/)  
+[My Portfolio](https://ikonicres.github.io/Professional-Portfolio)<center>
 On smaller screens like mobile devices or tablets, the page layout switches to a scale thats easier to view, with things cascading vertically down the page in a column. Use the navlinks at the top right to jump around the page and the resume link to download my resume directly. The work cards to navigate externally to my work, and hovering over the "contact" section pops up all of the contact links.
 
 
 ![Desktop preview](./assets/images/preview.png)
-![Mobile preview A](./assets/images/mobile-preview-01.png)
-![Mobile preview B](./assets/images/mobile-preview-02.png)
+![Mobile preview A](./assets/images/mobile-preview-01.png)<center>
+![Mobile preview B](./assets/images/mobile-preview-02.png)<center>
 
 
 ## Credits
