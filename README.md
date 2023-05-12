@@ -10,7 +10,7 @@ I wanted the page to look really nice on both desktop and mobile and to showcase
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
-
+- [Features](#features)
 
 ## Usage
 
