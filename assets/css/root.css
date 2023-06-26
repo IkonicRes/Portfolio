@@ -1,23 +1,42 @@
+
 :root {
-    --text-color: black;
-    --h1-fontsize: 3rem;
-    --navbar-height: 4em;
-    --nav-link-fontsize: 2rem;
-    --banner-height: 7em;
-    --q-fontsize: 1.5rem;
-    --shadow-positive: .05vw;
-    --shadow-negative: -.05vw;
-    --sub-banner-height: 3.5em;
-    --h3-fontsize: 1.85em;
-    --light-text: #ff6ef3;
-    --card-height: 11em;
-    --card-fontsize: 2.5rem;
-    --card-shadow-positive: .1vw;
-    --card-shadow-negative: -.1vw;
-    --contact-hover-size: 1.5em;
-    --header-purple: #180011;
-    --page-color: rgb(14, 0, 37);
+    /* COLORS */
     --easy-cyan: #3dd7fd;
     --magenta-border: #e600e6;
     --Dark-slate: #1d1e22;
+    /* BACKGROUND COLORS */
+    --text-color: black;
+    --header-purple: #180011;
+    --page-color: rgb(14, 0, 37);
+    /* TEXT COLORS */
+    --main-text-color: rgb(255, 0, 0);
+    --light-text: #ff4cf0;
+    /* SHADOW COLORS */
+    --shadowcolor: rgba(0, 238, 255, 0.16);
+    /* TEXT EFFECTS */
+    --shadow-positive: .05vw;
+    --shadow-negative: -.05vw;
+    --card-shadow-positive: .1vw;
+    --card-shadow-negative: -.1vw;
+    --base-textshadow: -1px 1px 1px var(--shadowcolor),
+    1px 1px 1px var(--shadowcolor),
+    -1px -1px 1px var(--shadowcolor),
+    1px -1px 1px var(--shadowcolor);
+    /* SIZES  */
+    --h1-fontsize: 3rem;
+    --nav-link-fontsize: 2rem;
+    --q-fontsize: 1.5rem;
+    --h3-fontsize: 1.85em;
+    --card-fontsize: 2.5rem;
+    --contact-hover-size: 1.5em;
+    --navbar-height: 4em;
+    --banner-height: 7em;
+    --sub-banner-height: 3.5em;
+    --card-height: 11em;
+    /* SPACING */
+    --h1-margintop: 25vh;
+    /* BORDERS */
+
+    /* TRANSFORM */
+
 }

@@ -113,6 +113,7 @@ h3 {
 /* Set the color of the article's paragraph text to --light-text, add some padding and margin to keep it center in the page and space out a bit from the top left. */
 article p {
     color: var(--light-text);
+    text-shadow: var(--base-textshadow);
     padding: 1vw 10vw 5vw 0;
     margin: .75vw;
 }
