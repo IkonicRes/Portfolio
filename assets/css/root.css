@@ -10,9 +10,9 @@
     --page-color: rgb(14, 0, 37);
     /* TEXT COLORS */
     --main-text-color: rgb(255, 0, 0);
-    --light-text: #d435c7;
+    --light-text: #ec77e2;
     /* SHADOW COLORS */
-    --shadowcolor: rgba(0, 238, 255, 0.16);
+    --shadowcolor: rgba(255, 255, 255, 0.157);
     /* TEXT EFFECTS */
     --shadow-positive: .05vw;
     --shadow-negative: -.05vw;
@@ -29,8 +29,8 @@
     --h3-fontsize: 1.85em;
     --card-fontsize: 2.5rem;
     --contact-hover-size: 1.5em;
-    --navbar-height: 4em;
-    --banner-height: 7em;
+    --navbar-height: 6em;
+    --banner-height: 8em;
     --sub-banner-height: 3.5em;
     --card-height: 11em;
     /* SPACING */
