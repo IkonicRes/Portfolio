@@ -13,12 +13,14 @@
     --light-text: #ec77e2;
     /* SHADOW COLORS */
     --shadowcolor: rgba(255, 255, 255, 0.157);
+    --alt-shadowcolor: rgba(24, 2, 2, 0.022);
     /* TEXT EFFECTS */
     --shadow-positive: .05vw;
     --shadow-negative: -.05vw;
     --card-shadow-positive: .1vw;
     --card-shadow-negative: -.1vw;
     --base-textshadow: -1px 1px 1px var(--shadowcolor),
+    --base-textshadow: -1px 1px 1px var(--alt-shadowcolor),
     1px 1px 1px var(--shadowcolor),
     -1px -1px 1px var(--shadowcolor),
     1px -1px 1px var(--shadowcolor);
